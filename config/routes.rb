@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :activities
   resources :states
 
+  root 'main#index'
   get 'ilovetocode' => 'main#index'
 
   get 'about' => 'main#about'

@@ -1,2 +1,24 @@
-<h1>Main#about</h1>
-<p>Find me in app/views/main/about.html.erb</p>
+<style>
+	#color_change {
+		color: <%= @color %>;
+	}
+</style>
+
+<h1>We Can Change the Color</h1>
+<p id="color_change">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<p>
+	<%= link_to "Blue", about_path(color: "blue"), class: "btn btn-primary" %>
+	<%= link_to "Red", about_path(color: "red"), class: "btn btn-danger" %>
+	<%= link_to "Orange", about_path(color: "orange"), class: "btn btn-warning" %>
+	<%= link_to "Green", about_path(color: "green"), class: "btn btn-success" %>
+	<%= link_to "Light Blue", about_path(color: "lightblue"), class: "btn btn-info" %>
+	<%= link_to "Black", about_path(color: "black"), class: "btn btn-default" %>
+</p>

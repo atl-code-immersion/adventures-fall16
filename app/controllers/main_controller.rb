@@ -3,5 +3,6 @@ class MainController < ApplicationController
   end
 
   def about
+  	@color = params[:color]
   end
 end

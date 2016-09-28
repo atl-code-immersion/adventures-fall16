@@ -2,7 +2,7 @@
 
 <h1>Activities</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>ID</th>
@@ -29,5 +29,11 @@
 </table>
 
 <br>
+
+<p>
+  <% @images.shuffle.each do |image| %>
+    <%= image_tag image, alt: image, class: "img-responsive", width: "400" %>
+  <% end %>
+</p>
 
 <%= link_to 'New Activity', new_activity_path %>
